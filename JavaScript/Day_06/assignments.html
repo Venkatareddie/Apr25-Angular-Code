@@ -1,0 +1,136 @@
+<!-- 1. WAP to reverse a string
+input:- 'sachin'
+output:- 'nihcas'
+
+-->
+
+<script>
+    let name = 'sachin';
+    name = name.split('').reverse().join('');
+    console.log("Reverse of the string is: " + name); // Output: 'nihcas'
+</script>
+
+<!-- 
+2. WAP to reverse words
+	input:- 'This is javascript class'
+	output:- 'class javascript is this'
+-->
+<script>
+    let str = 'This is javascript class'
+    let rvrs = str.split(' ').reverse().join(' ');
+    console.log("Reverse of the words: " + rvrs);
+</script>
+
+<!-- 
+3. WAP to print the first non-repeated character in a string
+   input:- 'entertainment'
+   output:- r
+-->
+
+<script>
+    let strinput = 'entertainment';
+    let ch = strinput.split('');
+    for (let i = 0; i < ch.length; i++) {
+        if (ch.indexOf(ch[i]) === ch.lastIndexOf(ch[i])) {
+            console.log("First non repeated character is: " + ch[i]);
+            break;
+        }
+    }
+</script>
+
+<!-- 
+4. WAP to print a string in title case
+	input:- 'this is javascript class'
+   output:- 'This Is Javascript Class'
+-->
+
+<script>
+    let stri = 'this is javascript class';
+    let strupper = stri.split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join(' ');
+    console.log("String in title case: " + strupper);
+</script>
+
+<!-- 
+5. WAP to find longest word in a sentence
+	input:- 'this is javascript class'
+    output:- javascript
+	
+-->
+
+<script>
+    let find_longest_word = 'this is javascript class';
+    let longest_word = find_longest_word.split(' ');
+    for (let i = 0; i < longest_word.length; i++) {
+        if (longest_word[i].length > longest_word[0].length) {
+            longest_word[0] = longest_word[i];
+        }
+    }
+    console.log("Longest word in the sentence is: " + longest_word[0]);
+</script>
+
+<!-- 
+6. WAP to print Account number
+   input:- '12345678987'
+   output:- '12*******87'
+-->
+
+<script>
+    let account_number = '12345678987';
+    let masked_account = account_number.slice(0, 2) + '*******' + account_number.slice(-2);
+    console.log("Masked Account number is :" + masked_account);
+</script>
+
+<!-- 
+7. WAP to print Credit-card number
+   input:- '1111222233334444'
+   output:- '1111-2222-3333-4444'
+   
+-->
+
+<script>
+    let num = '1111222233334444';
+    let credit_number = num.replace(/(\d{4})(?=\d)/g, '$1-');
+    console.log("Credit card number is: " + credit_number.slice(0, -1)); 
+</script>
+
+<!--
+8. WAP to check if 2 strings are anagram or not
+	'listen' - 'silent'    anagram(every char of str1 should be there in str2)
+-->
+
+<script>
+    let str1 = 'listen';
+    let str2 = 'silent';
+    if (str1.split('').sort().join('') === str2.split('').sort().join('')) {
+        console.log("Its a anagram");
+    } else {
+        console.log("Its not a anagram");
+
+    } 
+</script>
+
+<!-- 
+9. WAP to remove special character from a string
+   input:- 'hello@#hi&'
+   output:- 'hellohi'
+-->
+<script>
+    let strvalue = 'hello@#hi&';
+    let rem_special_char = strvalue.replace((/[^a-zA-Z0-9]/g), '');
+    console.log("After removing special characters: " + rem_special_char);
+</script>
+
+<!-- 
+   
+10. WAP to move all the special characters to the end of the string
+	input:- 'hello@#hi&'
+   output:- 'hellohi@#&'
+-->
+<script>
+    let strval = 'hello@#hi&';
+    let special_char = strval.replace(/[a-zA-Z0-9]/g, '');
+    let normal_char = strval.replace(/[^a-zA-Z0-9]/g, '');
+    console.log("After moving special characters to the end: " + normal_char + special_char);
+</script>

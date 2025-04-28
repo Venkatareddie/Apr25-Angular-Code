@@ -1,0 +1,27 @@
+<script>
+    let str1 = "hello";
+    let str2 = "hello";
+
+    console.log(typeof str1); //string
+    console.log(typeof str2); //string
+
+    let str3 = new String("hello");
+    let str4 = new String("Hi");
+
+    console.log(typeof str3); //object
+    console.log(typeof str4); //object
+
+    console.log(str1 == str3); //true
+    console.log(str3 == str4) //false
+    console.log(str1 == str2); //true
+
+    // let str5 = '2+3+6';
+    // console.log(eval(str5));
+
+    let str6 = new String('5+6+7');
+    console.log(eval(str6));
+
+    let str7 = str6.valueOf();
+    console.log(eval(str7)); //5+6+7
+
+</script>
