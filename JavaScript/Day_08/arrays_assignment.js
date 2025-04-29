@@ -26,8 +26,23 @@ console.log("Updated Employees with increased salary: ", employees);
 
 //5. declare array of employees & add "comp:ibm" to every employee;
 
-employees.forEach((emp) => {
-    emp.add.company = 'ibm';
-});
-console.log("Updated Employees with company: ", employees);
+// employees.forEach((emp) => {
+//     emp.add.company = 'ibm';
+// });
+// console.log("Updated Employees with company: ", employees);
+
+/* 6. convert array of letters to array of words
+const inputArr = [
+    'b', 'a', 'k', 'e', '',
+    'c', 'a', 'k', 'e', '',
+    'e', 'a', 't'
+];
+output = ['bake', 'cake', 'eat'];
+
+*/
+const inputArr = [
+    'b', 'a', 'k', 'e', '',
+    'c', 'a', 'k', 'e', '',
+    'e', 'a', 't'
+];
 
