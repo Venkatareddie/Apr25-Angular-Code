@@ -1,0 +1,12 @@
+let str = 'entertainment'; // {}
+
+let result = str.split('').reduce((charObj, char) => {
+    if (charObj[char]) {
+        charObj[char] = charObj[char] + 1;
+    } else {
+        charObj[char] = 1;
+    }
+    return charObj;
+}, {})
+
+console.log(result)
