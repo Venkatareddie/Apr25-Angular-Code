@@ -27,7 +27,7 @@ console.log("Updated Employees with increased salary: ", employees);
 //5. declare array of employees & add "comp:ibm" to every employee;
 
 employees.forEach(emp => emp.comp = 'ibm');
-console.log("Added company info:", employees);
+console.log("Added the company name with name to all employees:", employees);
 
 /* 6. convert array of letters to array of words
 const inputArr = [
@@ -82,13 +82,13 @@ console.log("Employees with Department Info: ", employee);
 */
 
 // Group by name using reduce
-let groupedEmployees = employees.reduce((acc, emp) => {
-    acc[emp.name] = acc[emp.name] || [];
-    acc[emp.name].push(emp);
-    return acc;
-}, {});
+// let groupedEmployees = employees.reduce((acc, emp) => {
+//     acc[emp.name] = acc[emp.name] || [];
+//     acc[emp.name].push(emp);
+//     return acc;
+// }, {});
 
-console.log("Grouped Employees by Name: ", groupedEmployees);
+// console.log("Grouped Employees by Name: ", groupedEmployees);
 
 // 9. intersection of 2 number arrays
 
@@ -114,3 +114,4 @@ input.forEach((element) => {
 });
 
 console.log("Occurrence of each element:", Object.fromEntries(newInput));
+
